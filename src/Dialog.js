@@ -43,8 +43,8 @@ class Dialog extends Component {
         return (
             <View style={[{
                 width: '100%',
-                padding: 24,
-                paddingTop: 20
+                paddingHorizontal: 4,
+                paddingVertical: 55,
             }, contentStyle]}>
                 {children}
             </View>
@@ -106,7 +106,7 @@ class Dialog extends Component {
     render() {
         const {
             dialogStyle, visible, animationType, onRequestClose, onShow,
-            onOrientationChange, onTouchOutside, overlayStyle, supportedOrientations,
+            onOrientationChange, onTouchOutside, overlayStyle, supportedOrientations
         } = this.props;
 
         const dialogBackgroundColor = OS === 'ios' ? "#e8e8e8" : "#ffffff";
@@ -165,9 +165,12 @@ Dialog.propTypes = {
     overlayStyle: ViewPropTypes.style,
     buttons: PropTypes.element,
     visible: PropTypes.bool,
+    animationType: Modal.propTypes.animationType,
     onRequestClose: PropTypes.func,
     onShow: PropTypes.func,
+    onOrientationChange: Modal.propTypes.onOrientationChange,
     onTouchOutside: PropTypes.func,
+    supportedOrientations: Modal.propTypes.supportedOrientations,
     title: PropTypes.string,
     titleStyle: Text.propTypes.style
 }
