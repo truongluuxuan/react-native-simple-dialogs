@@ -133,7 +133,7 @@ class Dialog extends Component {
                     <View style={[{
                         backgroundColor: dialogBackgroundColor,
                         width: '100%',
-                        shadowOpacity: 0.24,
+                        shadowOpacity: 0,
                         borderRadius: dialogBorderRadius,
                         elevation: 4,
                         shadowOffset: {
